@@ -11,12 +11,6 @@ import static org.openqa.selenium.By.partialLinkText;
 
 public class SelenideTest {
 
-    //@BeforeAll
-    //static void setUp() {
-    //    Configuration.holdBrowserOpen = true;
-    //    Configuration.baseUrl = "https://github.com";
-    //    Configuration.browserSize = "1920x1080";
-
     @Test
     public void githubIssueTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -29,7 +23,6 @@ public class SelenideTest {
         $(linkText("eroshenkoam/allure-example")).click();
         $(partialLinkText("Issues")).click();
         $(withText("#76")).click();
-
     }
 }
 
